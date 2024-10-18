@@ -1,0 +1,10 @@
+register:
+  email:
+    used: Cet email est déjà utilisé.
+  password:
+    short: Votre mot de passe doit comporter au moins {{ limit }} caractères.
+  terms:
+    required: Vous devez accepter les conditions générales d'utilisation.
+
+This value should not be blank.: Ce champ est requis.
+This value is not a valid email address.: Cet email n'est pas valide.

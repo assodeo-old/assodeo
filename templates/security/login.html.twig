@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'messages' %}
+
+{% block title %}{{ 'login.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-center mt-3">
+        <div class="col-8 col-md-6 col-xl-4">
+            <div class="d-flex flex-column">
+                <form method="post" class="border-bottom pb-4">
+                    {% if error %}
+                        <div role="alert" class="alert alert-danger">
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                        </div>
+                    {% endif %}
+
+                    <h1 class="text-start">{{ 'login.title'|trans }}</h1>
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label">{{ 'login.email'|trans }}</label>
+                        <input id="username"
+                               name="_username"
+                               type="email"
+                               value="{{ last_username }}"
+                               autocomplete="email"
+                               required
+                               autofocus
+                               class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">{{ 'login.password'|trans }}</label>
+                        <input id="password"
+                               name="_password"
+                               type="password"
+                               autocomplete="current-password"
+                               required
+                               class="form-control">
+                    </div>
+
+                    <input name="_csrf_token" type="hidden" value="{{ csrf_token('authenticate') }}">
+
+                    <div class="form-check mb-3">
+                        <input id="remember_me" name="_remember_me" type="checkbox" class="form-check-input">
+                        <label for="remember_me" class="form-check-label">{{ 'login.remember_me'|trans }}</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark w-100">{{ 'login.submit'|trans }}</button>
+                </form>
+
+                <a href="{{ path('app_register') }}" class="btn btn-link mt-3">{{ 'login.not_registered'|trans }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

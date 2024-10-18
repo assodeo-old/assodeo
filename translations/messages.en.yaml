@@ -3,3 +3,29 @@ assodeo: Assodeo
 home:
   title: Home
   in_progress: In progress
+
+login:
+  title: Login
+  email: Email
+  password: Password
+  remember_me: Remember me
+  submit: Login
+  not_registered: I don't have an account yet
+
+register:
+  title: Register
+  first_name:
+    label: First name
+    placeholder: Enter your first name
+  last_name:
+    label: Last name
+    placeholder: Enter your last name
+  email:
+    label: Email
+    placeholder: Enter your email
+  password:
+    label: Password
+    placeholder: Enter your password
+    help: Your password must be at least {{ min_length }} characters long.
+  agree_terms: I agree to the terms of use
+  already_registered: I already have an account
