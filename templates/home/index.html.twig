@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Assodeo - Accueil{% endblock %}
+{% trans_default_domain 'messages' %}
+
+{% block title %}{{ 'home.title'|trans }}{% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Assodeo</h1>
+    <div class="container">
+        <h1>{{ 'assodeo'|trans }}</h1>
 
-    <p>En cours de développement</p>
-</div>
+        <p>{{ 'home.in_progress'|trans }}</p>
+    </div>
 {% endblock %}
