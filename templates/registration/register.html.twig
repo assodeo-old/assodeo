@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'messages' %}
+
+{% block title %}{{ 'register.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-center mt-3">
+        <div class="col-8 col-md-6 col-xl-4">
+            <div class="d-flex flex-column">
+                {{ form_start(registrationForm, {
+                    attr: {
+                        class: 'border-bottom pb-4',
+                    }
+                }) }}
+                <h1>{{ 'register.title'|trans }}</h1>
+
+                <div class="row mb-3">
+                    {{ form_row(registrationForm.firstName, {
+                        row_attr: {
+                            class: 'col-6',
+                        },
+                    }) }}
+                    {{ form_row(registrationForm.lastName, {
+                        row_attr: {
+                            class: 'col-6',
+                        },
+                    }) }}
+                </div>
+
+                {{ form_row(registrationForm.email) }}
+
+                {{ form_row(registrationForm.plainPassword) }}
+
+                {{ form_row(registrationForm.agreeTerms) }}
+
+                <button type="submit" class="btn btn-dark w-100">{{ 'register.title'|trans }}</button>
+                {{ form_end(registrationForm) }}
+
+                <a href="{{ path('app_login') }}" class="btn btn-link mt-3">{{ 'register.already_registered'|trans }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

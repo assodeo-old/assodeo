@@ -3,3 +3,29 @@ assodeo: Assodeo
 home:
   title: Accueil
   in_progress: En cours de développement
+
+login:
+  title: Se connecter
+  email: Email
+  password: Mot de passe
+  remember_me: Se souvenir de moi
+  submit: Se connecter
+  not_registered: Je n'ai pas encore de compte
+
+register:
+  title: S'inscrire
+  first_name:
+    label: Prénom
+    placeholder: Saisissez votre prénom
+  last_name:
+    label: Nom
+    placeholder: Saisissez votre nom
+  email:
+    label: Email
+    placeholder: Saisissez votre email
+  password:
+    label: Mot de passe
+    placeholder: Saisissez votre mot de passe
+    help: Votre mot de passe doit comporter au moins {{ min_length }} caractères.
+  agree_terms: J'accepte les conditions d'utilisation
+  already_registered: J'ai déjà un compte

@@ -1,0 +1,10 @@
+register:
+  email:
+    used: This email is already in use.
+  password:
+    short: Your password must be at least {{ limit }} characters long.
+  terms:
+    required: You must agree to the terms and conditions.
+
+This value should not be blank.: This field is required.
+This value is not a valid email address.: This email address is not valid.
